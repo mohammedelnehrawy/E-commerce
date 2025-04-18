@@ -1,0 +1,39 @@
+<section class="rounded w-1/2 mx-auto">
+  <h1 class="text-center text-green-600 text-4xl m-3">checkOut</h1>
+  <form [formGroup]="checkOutForm" class="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-md space-y-4" (ngSubmit)="submitForm()">
+    <div class="mb-1">
+      <label for="details" class="block mb-2 text-2xl font-medium text-gray-900"
+        >details
+      </label>
+      <textarea
+        formControlName="details"
+        id="details"
+        class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      ></textarea>
+    </div>
+    <div class="mb-1">
+      <label for="phone" class="block mb-2 text-2xl font-medium text-gray-900"
+        >phone
+      </label>
+      <input
+        formControlName="phone"
+        type="tel"
+        id="phone"
+        class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      />
+    </div>
+    <div class="mb-1">
+      <label for="city" class="block mb-2 text-2xl font-medium text-gray-900"
+        >city
+      </label>
+      <input
+        formControlName="city"
+        type="text"
+        id="city"
+        class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      />
+    </div>
+
+    <button [disabled]="checkOutForm.invalid" class="btn-main " type="submit">Online Payment</button>
+  </form>
+</section>
